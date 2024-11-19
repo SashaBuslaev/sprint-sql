@@ -1,1 +1,1 @@
-SELECT first_name, last_name, substring(email, 1, charindex('@', email)) email_domain FROM students;
+SELECT first_name, last_name, substring(email, charindex('@', email)+1, len(email) - charindex('@', email)) email_domain FROM students;

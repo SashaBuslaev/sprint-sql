@@ -1,1 +1,1 @@
-SELECT first_name, last_name, substr(email, instr('@', email)+1) email_domain FROM students;
+SELECT first_name, last_name, substr(email, instr(email, '@')+1) email_domain FROM students;

@@ -1,4 +1,3 @@
-
 INSERT INTO students (student_id, first_name, last_name, email, enrollment_date)
 VALUES 
 (1, 'Mustafa', 'Sarvarov', 'mustafa.sarvarov@gmail.com', '2023-10-04'),

@@ -6,6 +6,6 @@ case
     else 'Low'
 end as 'salary_category',
 case
-    when department_id < 5 then 'Core Team'
+    when department_id <= 5 then 'Core Team'
     else 'Support Team'
 end as 'employee_type' from employees;

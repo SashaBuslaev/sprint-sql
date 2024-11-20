@@ -1,0 +1,1 @@
+select distinct position from employees;

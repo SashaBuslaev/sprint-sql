@@ -1,0 +1,1 @@
+select avg(salary) as average_salary from employees;

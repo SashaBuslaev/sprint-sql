@@ -1,7 +1,7 @@
 select 
 case
     when budget > 1000000 then upper(name) || ' - LARGE BUDGET'
-    when budget >= 500000 then upper(name, 1, 1) || lower(name, 2) || ' - Medium Budget'
+    when budget >= 500000 then upper(substr(name, 1, 1)) || lower(substr(name, 2)) || ' - Medium Budget'
     else lower(name) || ' - small budget'
 end as department_display from departments;
 

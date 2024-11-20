@@ -9,7 +9,6 @@ order by number_of_employees desc, name asc;
 select name, price, rating, quantity from products
 order by rating desc, price asc, quantity desc;
 
-select first_name, last_name, hire_date, round( ( julianday(datetime('now')) - julianday(datetime(hire_date)) ) / 365) as years_of_service from employees
+select first_name, last_name, hire_date, cast( ( julianday(datetime('now')) - julianday(datetime(hire_date)) ) / 365.25 as integer) as years_of_service from employees
 where hire_date >= date('now', '-5 years') 
 order by years_of_service desc, hire_date asc;
-select "Hello";

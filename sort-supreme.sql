@@ -1,7 +1,7 @@
 select first_name, last_name, salary, department_id from employees
 order by department_id asc, salary desc, last_name asc;
 
-select name, budget, count(e.department_id) as number_of_employees from departments d left join employees e 
+select name, budget, count(e.department_id) as number_of_employees from departments d  join employees e 
 on d.department_id = e.department_id
 group by d.department_id
 order by number_of_employees desc, name asc;

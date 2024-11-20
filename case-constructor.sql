@@ -4,8 +4,8 @@ case
     when salary > 75000 then 'High'
     when salary > 50000 then 'Medium'
     else 'Low'
-end as 'Salary category',
+end as 'salary_category',
 case
     when department_id < 5 then 'Core Team'
     else 'Support Team'
-end as 'Employee type' from employees;
+end as 'employee_type' from employees;

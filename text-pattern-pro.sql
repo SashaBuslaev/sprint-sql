@@ -11,4 +11,4 @@ where
 (first_name like '_a%' or first_name like '_e%') and (substr(last_name, 1, 1) = substr(last_name, -1, 1)) and (position like '%Manager' or position like '%Director') and d.department_id = e.department_id;
 
 select name, rating, 'Product: ' || upper(name) || ' | Price: ' || price || ' | Rating: ' || rating as product_summary from products
-where rating > (select avg(rating) from products);
+where name like '% %' and name not like '% % %' and rating > (select avg(rating) from products);

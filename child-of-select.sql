@@ -1,3 +1,1 @@
-SELECT rating, sum(quantity) as total_quantity, round(avg(price), 2) as average_price FROM products
-GROUP BY rating
-HAVING total_quantity > 500;
+select first_name, last_name, (select avg(salary) FROM employees GROUP BY department_id) as department_avg_salary from employees;

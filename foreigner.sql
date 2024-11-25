@@ -1,4 +1,4 @@
-SELECT c.CustomerId, c.FirstName || " " || c.LastName AS CustomerName, e.FirstName || " " || e.LastName AS SupportRepTitle
+SELECT c.CustomerId, c.FirstName || " " || c.LastName AS CustomerName, e.FirstName || " " || e.LastName AS SupportRepName, e.Title AS SupportRepTitle
 FROM Customers c 
 JOIN Employees e ON c.SupportRepId = e.EmployeeId
 ORDER BY CustomerName ASC;

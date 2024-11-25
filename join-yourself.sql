@@ -3,4 +3,5 @@ SELECT FirstName AS ManagerFirstName, LastName AS ManagerLastName, Title AS Mana
 WHERE e.EmployeeId = ReportsTo
 ) AS SubordinateCount
 FROM employees e
+WHERE SubordinateCount != 0
 ORDER BY ManagerLastName, ManagerFirstName;

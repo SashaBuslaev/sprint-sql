@@ -1,10 +1,11 @@
-BEGIN;
+BEGIN TRANSACTION;
+
 INSERT INTO artists (Name)
-VALUES('Acquired Records');
+VALUES ('Acquired Records');
 
 UPDATE albums
 SET ArtistId = (SELECT ArtistId FROM artists WHERE Name = 'Acquired Records')
-WHERE 2 > (SELECT count(a.AlbumId) FROM albums a GROUP BY a.ArtistId HAVING ArtistId = a.ArtistId);
+WHERE ArtistId in (SELECT ArtistId FROM albums GROUP BY ArtistId HAVING count(AlbumId) < 2);
 
 UPDATE tracks 
 SET UnitPrice = UnitPrice * 0.8

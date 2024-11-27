@@ -13,4 +13,4 @@ WHERE AlbumId = (SELECT AlbumId FROM albums WHERE ArtistId = (SELECT ArtistId FR
 DELETE FROM artists 
 WHERE ArtistId NOT IN (SELECT ArtistId FROM albums);
 
-ROLLBACK;
+COMMIT;
